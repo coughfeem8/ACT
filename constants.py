@@ -1,1 +1,0 @@
-BASE_API = 'https://www.amiiboapi.com/api/'
