@@ -1,31 +1,6 @@
-import json
-from types import SimpleNamespace
-import requests
-import constants
+from api import get_amiibo_series, get_amiibo_single_series
+from domain.models.amiibo import AmiiboCharacter
 from prettytable import PrettyTable
-from amiibo import AmiiboCharacter
-
-
-### state
-selected_amiibo_series = ''
-
-### request
-def get_amiibo_series():
-    url =  constants.BASE_API+'gameseries'
-    try:
-        return requests.get(url).json().get('amiibo')
-    except requests.exceptions.RequestException as e:
-        print('error getting amiibo series')
-        return False
-
-def get_amiibo_single_series(code):
-    url =  constants.BASE_API+'amiibo/?gameseries='+code+'&showusage'
-    try:
-        return requests.get(url).json().get('amiibo') 
-    except requests.exceptions.RequestException as e:
-        print('error getting amiibo series')
-        return False
-
 
 ### prints
 def print_amiibo_options():
@@ -49,7 +24,9 @@ def  print_amiibo_series_data(code):
             char = AmiiboCharacter(**row)
             table.add_row([char.character,char.name,char.gameSeries,char.type,char.release["na"]])
         print(table)
-if __name__ == "__main__":
+
+def run_shell() -> None:
+    selected_amiibo_series = ''
     print('welcome to ACT')
     print('provide the series of amiibos to generate cards for:')
     print_amiibo_options()
@@ -58,5 +35,3 @@ if __name__ == "__main__":
         print_amiibo_series_data(selected_amiibo_series)
     else:
         print('not a valid option')
-    
-    
