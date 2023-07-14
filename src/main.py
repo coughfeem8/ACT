@@ -1,7 +1,7 @@
-from view.shell import run_shell
+from view.shell import start_cli
 
 def main() -> None:
-    run_shell()
+    start_cli()
 
     
 if __name__ == "__main__":

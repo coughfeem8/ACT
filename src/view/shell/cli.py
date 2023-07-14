@@ -1,37 +1,25 @@
-from api import get_amiibo_series, get_amiibo_single_series
-from domain.models.amiibo import AmiiboCharacter
-from prettytable import PrettyTable
+from .docs import STARTUP_DOC
+from .core import (
+    add_command,
+    run_shell
+)
+from .commands import (
+    exit_shell,
+    help_shell,
+    list_command,
+    download_command,
+    create_command,
+    saved_command
+)
 
-### prints
-def print_amiibo_options():
-    table = PrettyTable()
-    series = get_amiibo_series()
-    if(series):
-        table.field_names = ['option','series']
-        for row in series:
-            table.add_row([row['key'],row['name']])
-        print(table)
 
-def  print_amiibo_series_data(code):
-    print(code)
-    table = PrettyTable()
-    series = get_amiibo_single_series(code)
-    if(series):
-        print(len(series), "Character(s) Found!")
-        table.field_names = ['Character','Name','Game Series','Type','Release US']
-        for row in series:
-            
-            char = AmiiboCharacter(**row)
-            table.add_row([char.character,char.name,char.gameSeries,char.type,char.release["na"]])
-        print(table)
-
-def run_shell() -> None:
-    selected_amiibo_series = ''
-    print('welcome to ACT')
-    print('provide the series of amiibos to generate cards for:')
-    print_amiibo_options()
-    selected_amiibo_series = input('option:')
-    if(selected_amiibo_series != ''):
-        print_amiibo_series_data(selected_amiibo_series)
-    else:
-        print('not a valid option')
+def start_cli() -> None:
+    
+    add_command(['exit'],exit_shell)
+    add_command(['help', 'h'], help_shell)
+    add_command(['list','l'], list_command)
+    add_command(['download','d'], download_command)
+    add_command(['create','c'], create_command)
+    add_command(['saved','s'], saved_command)  
+    print(STARTUP_DOC)
+    run_shell()

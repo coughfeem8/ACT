@@ -9,7 +9,7 @@ def get_amiibo_series() -> dict:
     except requests.exceptions.RequestException as e:
         print('error getting amiibo series')
 
-def get_amiibo_single_series(code:str) -> dict:
+def get_amiibo_single_series(code: str) -> dict:
     url =  BASE_API+'amiibo/?gameseries='+code+'&showusage'
     try:
         return requests.get(url).json().get('amiibo') 
