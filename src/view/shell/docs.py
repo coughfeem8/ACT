@@ -7,36 +7,42 @@ Language: {f.CYAN}Python3.10{f.YELLOW}
 Description: A tool to keep track and create custom
 amiibo card artwork using the Amiibo API and templates.
 """
-
 HELP_DOC = """
-Usage:
-To list amiibo data:
-    list amiibo -c <code>
-    list series
-To download metadata artwork and qr codes:
-    download <amiibo|series> -c <code>
-To create cards:
-    create amiibo -c <code>
-To list saved data for amiibos and series:
-    saved 
-Get Help:
-    help
-Exit:
-    exit
+    Usage: <command> <search> [<code>]
+        command: either list, download, create, saved
+        search: amiibo or series
+        code: id for series or amiibo being searched the name works for amiibo too
 """
 
 
 LIST_DOC = f"""
 Usage:
-    {f.YELLOW}<list|l> <<amiibo|a>|<series|s>> (<code|c> .*)?
-    {f.WHITE}l : list series
-    list :list series
-    list series
-    l series
-    l s
-    list series code <code>:list specific amiibo series
-    list series c <code> l
-    list amiibo -c <code>
+     Usage: <command> <search> <code>
+        description: retrieve list of amiibos or series of amiibos given the search criteria.
+        search: amiibo or series
+        code: id for series or amiibo being searched the name works for amiibo too
+"""
+DOWNLOAD_DOC = f"""
+Usage:
+     Usage: <command> <search> <code>
+        description: same as list, but also stores the resulting into a local database with images and qr codes.
+        search: amiibo or series
+        code: id for series or amiibo being searched the name works for amiibo too
+"""
+CREATRE_DOC = f"""
+Usage:
+     Usage: <command> <search>? <code>
+        description: triggers process to generate artwork for the given process
+        search: amiibo or series
+        code: id for series or amiibo being searched the name works for amiibo too
+"""
+
+SAVED_DOC = f"""
+Usage:
+     Usage: <command> <search>? <code>
+        description: request list of locally stored metadata for ACT
+        search: amiibo or series
+        code: id for series or amiibo being searched the name works for amiibo too
 """
 EXIT_DOC = f"""{f.YELLOW}
     Thanks for using ACT

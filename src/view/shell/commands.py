@@ -2,12 +2,19 @@ from .docs import (HELP_DOC, EXIT_DOC, LIST_DOC)
 from time import sleep
 from domain.models.amiibo import AmiiboCharacter
 from prettytable import PrettyTable
-from api import get_amiibo_series, get_amiibo_single_series
+from api import get_amiibo_series, get_amiibo_single, get_amiibo_single_series
 
 
 AMIIBO_ARG = ['amiibo','a']
 SERIES_ARG = ['series','s']
-CODE_ARG = ['code','c']
+COMMANDS = {
+    'list':['list','l'],
+    'download':['download','d'],
+    'create':['create','c'],
+    'saved':['saved','s'],
+    'help':['help', 'h'],
+    'exit': ['exit']
+}
 
 def help_shell(_: list[str]) -> None:
     print(HELP_DOC)
@@ -21,36 +28,26 @@ def exit_shell(_: list[str]) -> None:
 
 def list_command(args: list[str]) -> None:
     print(args)
-    print('list command')
-    if len(args) == 3:
-        if not validate_arg(args[1],CODE_ARG):
-            print(LIST_DOC)
-            return
-        print('using hard code')
+    #no args
+    if len(args)==0:
+        print_all_series()
+    #amiibo or series
+    elif len(args)==1:
         if validate_arg(args[0],AMIIBO_ARG):
-            print('get single character')
-            return 
+           print(LIST_DOC)
         if validate_arg(args[0],SERIES_ARG):
-            print('get series for given code')
-            print_amiibo_series(get_amiibo_single_series(args[2]))
-            return
-    elif len(args) == 2:
-        print('missing code')
-        print(LIST_DOC)
-        return 
-    elif len(args) == 1:
+           print_amiibo_characters(get_amiibo_series(args[1]))
+    #amiibo or series w code
+    elif len(args)==2:
         if validate_arg(args[0],AMIIBO_ARG):
-            print(LIST_DOC)
-            return 
-        elif validate_arg(args[0],SERIES_ARG):
-            print('get series for given code')
-            print_all_series(get_amiibo_series())
-            return 
-        return
+           print_amiibo_characters(get_amiibo_single(args[1]))
+        if validate_arg(args[0],SERIES_ARG):
+           print_amiibo_characters(get_amiibo_series(args[1]))
     else:
-        print_all_series(get_amiibo_series())
+        print(LIST_DOC)
+    
+    
         
-
 def download_command(args: list[str]) -> None:
     print('download command')
 
@@ -69,7 +66,7 @@ def print_all_series(series:dict) -> None:
             table.add_row([row['key'],row['name']])
         print(table)
 
-def print_amiibo_series(series: dict)-> None:
+def print_amiibo_characters(series: dict)-> None:
       table = PrettyTable()
       if(series):
         print(len(series), "Character(s) Found!")
