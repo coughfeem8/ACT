@@ -17,21 +17,21 @@ HELP_DOC = """
 
 LIST_DOC = f"""
 Usage:
-     Usage: <command> <search> <code>
+     Usage: <command> (<search> <code>)?
         description: retrieve list of amiibos or series of amiibos given the search criteria.
         search: amiibo or series
         code: id for series or amiibo being searched the name works for amiibo too
 """
 DOWNLOAD_DOC = f"""
 Usage:
-     Usage: <command> <search> <code>
+     Usage: <command> (<search> <code>)?
         description: same as list, but also stores the resulting into a local database with images and qr codes.
         search: amiibo or series
         code: id for series or amiibo being searched the name works for amiibo too
 """
 CREATRE_DOC = f"""
 Usage:
-     Usage: <command> <search>? <code>
+     Usage: (<command> <search>? <code>)?
         description: triggers process to generate artwork for the given process
         search: amiibo or series
         code: id for series or amiibo being searched the name works for amiibo too
@@ -39,10 +39,8 @@ Usage:
 
 SAVED_DOC = f"""
 Usage:
-     Usage: <command> <search>? <code>
+     Usage: <command>
         description: request list of locally stored metadata for ACT
-        search: amiibo or series
-        code: id for series or amiibo being searched the name works for amiibo too
 """
 EXIT_DOC = f"""{f.YELLOW}
     Thanks for using ACT
