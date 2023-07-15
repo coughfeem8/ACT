@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "amiibo card tool (act)"
+version = "0.0.1"
+description = "Tool that keeps track and creates custom amiibo card artwork using the Amiibo API and custom templates."
+authors = ["Cougheem8 <serjyan.des@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+colorama = "^0.4.6"
+prettytable = "^3.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
