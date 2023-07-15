@@ -4,8 +4,8 @@ STARTUP_DOC = f"""
 {f.YELLOW}ACT CLI
 LICENCIE: MIT
 Language: {f.CYAN}Python3.10{f.YELLOW}
-Description: A tool to keep track and create custom
-amiibo card artwork using the Amiibo API and templates.
+Description: Tool that keeps track and creates custom amiibo card artwork 
+using the Amiibo API and custom templates.
 """
 HELP_DOC = """
     Usage: <command> <search> [<code>]
