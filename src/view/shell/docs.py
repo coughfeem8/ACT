@@ -13,8 +13,6 @@ HELP_DOC = """
         search: amiibo or series
         code: id for series or amiibo being searched the name works for amiibo too
 """
-
-
 LIST_DOC = f"""
 Usage:
      Usage: <command> (<search> <code>)?
@@ -29,14 +27,13 @@ Usage:
         search: amiibo or series
         code: id for series or amiibo being searched the name works for amiibo too
 """
-CREATRE_DOC = f"""
+CREATE_DOC = f"""
 Usage:
      Usage: (<command> <search>? <code>)?
         description: triggers process to generate artwork for the given process
         search: amiibo or series
         code: id for series or amiibo being searched the name works for amiibo too
 """
-
 SAVED_DOC = f"""
 Usage:
      Usage: <command>

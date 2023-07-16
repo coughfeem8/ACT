@@ -1,9 +1,8 @@
-from view.shell import start_cli
+from view.shell import cli
 
 def main() -> None:
-    start_cli()
+    cli.start_cli()
 
-    
 if __name__ == "__main__":
     main()
     

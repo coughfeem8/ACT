@@ -3,13 +3,13 @@ from .docs import (
     EXIT_DOC,
     LIST_DOC,
     DOWNLOAD_DOC,
-    CREATRE_DOC,
+    CREATE_DOC,
     SAVED_DOC
 )
 from time import sleep
-from domain.models.amiibo import AmiiboCharacter
+from domain.models import amiibo as a
 from prettytable import PrettyTable
-from api import get_amiibo_series, get_amiibo_single, get_amiibo_single_series
+from api import amiibo
 
 
 AMIIBO_ARG = ['amiibo','a']
@@ -37,7 +37,7 @@ def print_amiibo_characters(series: dict)-> None:
         print(len(series), "Character(s) Found!")
         table.field_names = ['Character','Name','Game Series','Type','Release US']
         for row in series: 
-            char = AmiiboCharacter(**row)
+            char = a.AmiiboCharacter(**row)
             table.add_row([char.character,char.name,char.gameSeries,char.type,char.release["na"]])
         print(table)
 
@@ -58,23 +58,22 @@ def list_command(args: list[str]) -> None:
     # pull down data to view or search for values.
     #no args
     if len(args)==0:
-        print_all_series(get_amiibo_series())
+        print_all_series(amiibo.get_amiibo_series())
     #amiibo or series
     elif len(args)==1:
         if validate_arg(args[0],AMIIBO_ARG):
            print(LIST_DOC)
         if validate_arg(args[0],SERIES_ARG):
-           print_amiibo_characters(get_amiibo_series(args[1]))
+           print_amiibo_characters(amiibo.get_amiibo_series(args[1]))
     #amiibo or series w code
     elif len(args)==2:
         if validate_arg(args[0],AMIIBO_ARG):
-           print_amiibo_characters(get_amiibo_single(args[1]))
+           print_amiibo_characters(amiibo.get_amiibo_single(args[1]))
         if validate_arg(args[0],SERIES_ARG):
-           print_amiibo_characters(get_amiibo_single_series(args[1]))
+           print_amiibo_characters(amiibo.get_amiibo_single_series(args[1]))
     else:
         print(LIST_DOC)
-    
-          
+        
 def download_command(args: list[str]) -> None:
     print('download command')
     # similar to list but this process will create the entries and store it locally on the application.
@@ -109,6 +108,8 @@ def create_command(args: list[str]) -> None:
           print(f'render amiibo(s) for character {args[1]}')
         if validate_arg(args[0],SERIES_ARG): #? ask if they are sure to download everything
           print(f'render amiibo(s) for series {args[1]} ')
+    else:
+        print(CREATE_DOC)
     #amiibo or series w code
 
 def saved_command(args: list[str]) -> None:

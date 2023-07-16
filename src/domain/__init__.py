@@ -1,1 +1,1 @@
-from .models.amiibo import AmiiboCharacter
+__all__ = ['models']
