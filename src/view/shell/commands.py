@@ -7,10 +7,10 @@ from .docs import (
     SAVED_DOC
 )
 from time import sleep
-from src.domain.models import amiibo as a
+from domain.models import amiibo as a
 from prettytable import PrettyTable
-from src.api import amiibo
-from src.services import process
+from api import amiibo
+from services import process
 
 
 AMIIBO_ARG = ['amiibo','a']
