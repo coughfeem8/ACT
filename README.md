@@ -14,6 +14,22 @@ Here are a few examples:
 
 ![zelda front](./assets/zelda%20front%20card%20link.png)
 
+The data is being pulled off from [amiibo api](https://amiiboapi.com/). the original design was created using Figma then translated to Ilustrator.
+#### template
+This is the data that get added to the format
+- game series
+- figure name
+- figure image
+- release date
+- amiibo series logo
+- amiibo qr image
+- head and tail of amiibo data
+- amiibo usage
+
+info not included in the program
+- nfc card data,
+    - this should be taken from your own amiibos, i'm not adding a way to add them.  
+
 
 
 ### Features
