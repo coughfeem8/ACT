@@ -13,7 +13,8 @@ from .commands import (
     saved_command,
 
 )
-def start_cli() -> None:
+
+def start() -> None:
     add_command(COMMANDS['exit'],exit_shell)
     add_command(COMMANDS['help'], help_shell)
     add_command(COMMANDS['list'], list_command)

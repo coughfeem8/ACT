@@ -36,3 +36,8 @@ class AmiiboCharacter:
     games3DS: list[Game]
     gamesSwitch: list[Game]
     gamesWiiU: list[Game]
+
+@dataclass
+class GameSeries:
+    key: str
+    name: str

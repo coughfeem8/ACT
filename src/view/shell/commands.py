@@ -7,8 +7,6 @@ from .docs import (
     SAVED_DOC
 )
 from time import sleep
-from domain.models import amiibo as a
-from prettytable import PrettyTable
 from api import amiibo
 from services import process
 
@@ -47,7 +45,7 @@ def list_command(args: list[str]) -> None:
         if validate_arg(args[0],AMIIBO_ARG):
            print(LIST_DOC)
         if validate_arg(args[0],SERIES_ARG):
-            process.print_amiibo_characters(amiibo.get_amiibo_series(args[1]))
+            process.print_all_series(amiibo.get_amiibo_series())
     #amiibo or series w code
     elif len(args)==2:
         if validate_arg(args[0],AMIIBO_ARG):
