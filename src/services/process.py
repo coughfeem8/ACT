@@ -1,4 +1,4 @@
-
+from domain.models import amiibo as a
 from abc import ABC, abstractmethod
 
 from prettytable import PrettyTable

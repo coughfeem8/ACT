@@ -1,6 +1,11 @@
+import configparser
 import requests
 
-BASE_API = 'https://www.amiiboapi.com/api/'
+#* configure this at main instead.
+config = configparser.ConfigParser()
+config.read('src/config.ini')
+BASE_API = config['Apis']['amiibo'];
+
 
 def get_amiibo_series() -> dict:
     url =  BASE_API+'gameseries'

@@ -10,9 +10,9 @@ Here are a few examples:
 
 ![smash front](./assets/smash%20front%20card%20link.png)
 
-![zelda back](./assets/zelda%20back%20card%20link.png)
+![Zelda back](./assets/zelda%20back%20card%20link.png)
 
-![zelda front](./assets/zelda%20front%20card%20Link.png)
+![Zelda front](./assets/zelda%20front%20card%20Link.png)
 
 The data is being pulled off from [amiibo api](https://amiiboapi.com/). the original design was created using Figma then translated to Illustrator.
 #### template
@@ -37,5 +37,8 @@ info not included in the program
 - (future) create UI for previewing vector version and colors for templates.
 
 ### How to run 
-- to run test use the `poetry run coverage run -m unittest discover -s ./src`
 - to run the application use `poetry run python src/main.py` 
+### How to test
+- to run test use the `poetry run coverage run -m unittest discover -s ./src`
+- to see coverage report use  `poetry run coverage report`
+- to visualize the coverage report in a browser use `poetry run coverage html`
