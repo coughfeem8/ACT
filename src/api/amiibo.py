@@ -23,22 +23,30 @@ BASE_API = config['Apis']['amiibo'];
 def get_amiibo_series() -> list[GameSeries]:
     url =  BASE_API+'gameseries'
     try:
-        return [GameSeries(**i)for i in requests.get(url).json().get('amiibo')]
+        data = requests.get(url).json().get('amiibo')
+        return [GameSeries(**i)for i in data]
     except requests.exceptions.RequestException as e:
         print('error getting amiibo series')
+        return []
 
-def get_amiibo_single(code: str) -> AmiiboCharacter:
+def get_amiibo_single(code: str) -> list[AmiiboCharacter]:
     url =  BASE_API+'amiibo/?character='+code+'&showusage'
     try:
-        return AmiiboCharacter(**requests.get(url).json().get('amiibo')[0])
+        data = requests.get(url).json().get('amiibo')
+        if(data):
+            return [AmiiboCharacter(**i) for i in data]
+        return data    
     except requests.exceptions.RequestException as e:
         print('error getting amiibo series')
+        
 
 def get_amiibo_single_series(code: str) -> list[AmiiboCharacter]:
     url =  BASE_API+'amiibo/?gameseries='+code+'&showusage'
     try:
-        return [AmiiboCharacter(**i) for i in requests.get(url).json().get('amiibo')]
+        data = requests.get(url).json().get('amiibo')
+        return [AmiiboCharacter(**i) for i in data]
     except requests.exceptions.RequestException as e:
         print('error getting amiibo series')
+        return []
 
 

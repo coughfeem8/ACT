@@ -25,12 +25,11 @@ class TestCommands(unittest.TestCase):
         res = amiibo.get_amiibo_single_series(code);
         self.assertIsNot(res,[])
     
-    def test_get_amiibo_single_series(self):
+    def test_get_amiibo_single_character(self):
         code = "0x1996" #Mewtwo
         res = amiibo.get_amiibo_single(code);
         self.assertIsNot(res,[])
-        print(res)
-        self.assertEquals(res.name,"Mewtwo")
+        self.assertEquals(res[0].name,"Mewtwo")
 
 if __name__ == '__main__':
     unittest.main()
