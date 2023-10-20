@@ -8,7 +8,6 @@ from .docs import (
 )
 from time import sleep
 from domain.models import amiibo as a
-from prettytable import PrettyTable
 from api import amiibo
 from services import process
 
