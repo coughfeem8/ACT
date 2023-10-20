@@ -24,7 +24,8 @@ def get_amiibo_series() -> list[GameSeries]:
     url =  BASE_API+'gameseries'
     try:
         data = requests.get(url).json().get('amiibo')
-        return [GameSeries(**i)for i in data]
+        if(data):
+            return [GameSeries(**i)for i in data]
     except requests.exceptions.RequestException as e:
         print('error getting amiibo series')
         return []
@@ -44,7 +45,8 @@ def get_amiibo_single_series(code: str) -> list[AmiiboCharacter]:
     url =  BASE_API+'amiibo/?gameseries='+code+'&showusage'
     try:
         data = requests.get(url).json().get('amiibo')
-        return [AmiiboCharacter(**i) for i in data]
+        if(data):
+            return [AmiiboCharacter(**i) for i in data]
     except requests.exceptions.RequestException as e:
         print('error getting amiibo series')
         return []
