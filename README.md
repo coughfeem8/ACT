@@ -12,9 +12,9 @@ Here are a few examples:
 
 ![zelda back](./assets/zelda%20back%20card%20link.png)
 
-![zelda front](./assets/zelda%20front%20card%20link.png)
+![zelda front](./assets/zelda%20front%20card%20Link.png)
 
-The data is being pulled off from [amiibo api](https://amiiboapi.com/). the original design was created using Figma then translated to Ilustrator.
+The data is being pulled off from [amiibo api](https://amiiboapi.com/). the original design was created using Figma then translated to Illustrator.
 #### template
 This is the data that get added to the format
 - game series
@@ -30,15 +30,12 @@ info not included in the program
 - nfc card data,
     - this should be taken from your own amiibos, i'm not adding a way to add them.  
 
-
-
 ### Features
 - request the amiibo series you want to create cards using the Amiibo API
 - generates, transforms and set up data to create new set of amiibo card stickers.
 - puts new generated cards in a user-specified folder with the aid of vector graphic software such as Inkscape or Illustrator & scripts for the given software.
 - (future) create UI for previewing vector version and colors for templates.
 
-
 ### How to run 
-- to run test use the ` poetry run coverage run -m unittest discover`
+- to run test use the `poetry run coverage run -m unittest discover -s ./src`
 - to run the application use `poetry run python src/main.py` 
