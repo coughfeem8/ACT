@@ -1,6 +1,6 @@
 import unittest
 
-from src.view.shell import commands
+from view.shell import commands
 class TestCommands(unittest.TestCase):
     '''testing shell.commands'''
 

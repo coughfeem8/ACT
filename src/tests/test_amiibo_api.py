@@ -1,5 +1,5 @@
 import unittest
-from src.api import amiibo
+from api import amiibo
 
 class TestCommands(unittest.TestCase):
     '''testing shell.commands'''
