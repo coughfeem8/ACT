@@ -8,7 +8,7 @@ from .docs import (
 )
 from time import sleep
 from api import amiibo
-from services import process
+from services import shell_printer as sp
 
 
 AMIIBO_ARG = ['amiibo','a']
@@ -39,19 +39,28 @@ def list_command(args: list[str]) -> None:
     # pull down data to view or search for values.
     #no args
     if len(args)==0:
-        process.print_all_series(amiibo.get_amiibo_series())
+        print(sp.amiibo_series_to_table(amiibo.get_amiibo_series()))
     #amiibo or series
     elif len(args)==1:
         if validate_arg(args[0],AMIIBO_ARG):
            print(LIST_DOC)
         if validate_arg(args[0],SERIES_ARG):
-            process.print_all_series(amiibo.get_amiibo_series())
+            data, count = sp.amiibo_series_to_table(amiibo.get_amiibo_series())
+            if(count):
+                print(count, "Character(s) Found!")
+                print(data)
     #amiibo or series w code
     elif len(args)==2:
         if validate_arg(args[0],AMIIBO_ARG):
-            process.print_amiibo_characters(amiibo.get_amiibo_single(args[1]))
+            data, count = sp.amiibo_characters_to_table(amiibo.get_amiibo_single(args[1]))
+            if(count):
+                print(count, "Character(s) Found!")
+                print(data)
         if validate_arg(args[0],SERIES_ARG):
-            process.print_amiibo_characters(amiibo.get_amiibo_single_series(args[1]))
+            data, count = sp.amiibo_characters_to_table(amiibo.get_amiibo_single_series(args[1]))
+            if(count):
+                print(count, "Character(s) Found!")
+                print(data)
     else:
         print(LIST_DOC)
         
