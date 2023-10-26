@@ -1,0 +1,93 @@
+{
+	"amiibo": [
+		{
+			"amiiboSeries": "Super Smash Bros.",
+			"character": "Mewtwo",
+			"gameSeries": "Pokemon",
+			"games3DS": [
+				{
+					"amiiboUsage": [
+						{
+							"Usage": "Give Kirby a Copy ability based on the character's abilities and a health item",
+							"write": false
+						}
+					],
+					"gameID": [
+						"0004000000189600",
+						"0004000000183600",
+						"0004000000189800"
+					],
+					"gameName": "Kirby: Planet Robobot"
+				},
+				{
+					"amiiboUsage": [
+						{
+							"Usage": "Battle and train up a computer-controlled Figure Player of the character",
+							"write": true
+						}
+					],
+					"gameID": [
+						"00040000000EE000",
+						"00040000000EDF00"
+					],
+					"gameName": "Super Smash Bros. for Nintendo 3DS"
+				}
+			],
+			"gamesSwitch": [
+				{
+					"amiiboUsage": [
+						{
+							"Usage": "Battle and train up a computer-controlled Figure Player of the character",
+							"write": true
+						}
+					],
+					"gameID": [
+						"01006A800016E000"
+					],
+					"gameName": "Super Smash Bros. Ultimate"
+				}
+			],
+			"gamesWiiU": [
+				{
+					"amiiboUsage": [
+						{
+							"Usage": "Unlock a character-based Mystery Mushroom costume",
+							"write": false
+						}
+					],
+					"gameID": [
+						"000500001018DD00",
+						"000500001018DC00",
+						"000500001018DB00"
+					],
+					"gameName": "Super Mario Maker"
+				},
+				{
+					"amiiboUsage": [
+						{
+							"Usage": "Battle and train up a computer-controlled Figure Player of the character",
+							"write": true
+						}
+					],
+					"gameID": [
+						"0005000010145000",
+						"0005000010144F00",
+						"0005000010110E00"
+					],
+					"gameName": "Super Smash Bros. for Wii U"
+				}
+			],
+			"head": "19960000",
+			"image": "https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_19960000-023d0002.png",
+			"name": "Mewtwo",
+			"release": {
+				"au": "2015-10-24",
+				"eu": "2015-10-23",
+				"jp": "2015-10-29",
+				"na": "2015-11-13"
+			},
+			"tail": "023d0002",
+			"type": "Figure"
+		}
+	]
+}

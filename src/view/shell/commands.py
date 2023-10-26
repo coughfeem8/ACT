@@ -1,3 +1,4 @@
+from prettytable import PrettyTable
 from .docs import (
     HELP_DOC,
     EXIT_DOC,
@@ -46,21 +47,15 @@ def list_command(args: list[str]) -> None:
            print(LIST_DOC)
         if validate_arg(args[0],SERIES_ARG):
             data, count = sp.amiibo_series_to_table(amiibo.get_amiibo_series())
-            if(count):
-                print(count, "Character(s) Found!")
-                print(data)
+            _display_list(data,count)
     #amiibo or series w code
     elif len(args)==2:
         if validate_arg(args[0],AMIIBO_ARG):
             data, count = sp.amiibo_characters_to_table(amiibo.get_amiibo_single(args[1]))
-            if(count):
-                print(count, "Character(s) Found!")
-                print(data)
+            _display_list(data,count)
         if validate_arg(args[0],SERIES_ARG):
             data, count = sp.amiibo_characters_to_table(amiibo.get_amiibo_single_series(args[1]))
-            if(count):
-                print(count, "Character(s) Found!")
-                print(data)
+            _display_list(data,count)
     else:
         print(LIST_DOC)
         
@@ -109,3 +104,8 @@ def saved_command(args: list[str]) -> None:
         return
     #display all locally stored amiibo data
     print('these are the amiibos locally stored.')
+
+def _display_list(table: PrettyTable, count:int) -> None:
+    if(count):
+        print(count, "Character(s) Found!")
+        print(table)
