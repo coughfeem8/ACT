@@ -1,18 +1,15 @@
-import unittest
+import unittest, unittest.mock
+import io
 from view.shell import commands
-
-from .mock_data import (
-   ALL_SERIES,
-   ZELDA_SERIES,
-   AMIIBO_MEWTWO
-)
 class TestCommands(unittest.TestCase):
     '''testing shell commands'''
 
 #TODO change code to actually compare the output of the command in case of print proceses
 #list command
-    def test_list_all_series(self):
-        self.assertIsNone(commands.list_command([]))
+    @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
+    def test_list_all_series(self,mock_stdout):
+        commands.list_command([])
+        self.assertEqual(mock_stdout.getvalue(),'')
 
     def test_list_all_series(self):
             self.assertIsNone(commands.list_command(['series']))
@@ -50,5 +47,6 @@ class TestCommands(unittest.TestCase):
     @classmethod
     def tearDownClass(self) -> None:
         print('cleaning Shell command test')
+
 if __name__ == '__main__':
     unittest.main()

@@ -1,0 +1,464 @@
+{
+	"amiibo": [
+		{
+			"key": "0x000",
+			"name": "Super Mario"
+		},
+		{
+			"key": "0x001",
+			"name": "Super Mario"
+		},
+		{
+			"key": "0x002",
+			"name": "Super Mario"
+		},
+		{
+			"key": "0x008",
+			"name": "Yoshi's Woolly World"
+		},
+		{
+			"key": "0x00c",
+			"name": "Donkey Kong"
+		},
+		{
+			"key": "0x010",
+			"name": "The Legend of Zelda"
+		},
+		{
+			"key": "0x014",
+			"name": "Breath of the Wild"
+		},
+		{
+			"key": "0x018",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x019",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x01a",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x01b",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x01c",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x020",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x021",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x022",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x023",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x024",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x025",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x026",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x027",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x028",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x029",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x02a",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x02b",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x02c",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x02d",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x02e",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x02f",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x030",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x031",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x032",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x033",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x034",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x035",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x036",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x037",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x038",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x039",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x03a",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x03b",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x03c",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x03d",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x03e",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x03f",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x040",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x041",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x042",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x043",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x044",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x045",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x046",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x047",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x048",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x049",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x04a",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x04b",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x04c",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x04d",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x04e",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x04f",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x050",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x051",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x058",
+			"name": "Star Fox"
+		},
+		{
+			"key": "0x05c",
+			"name": "Metroid"
+		},
+		{
+			"key": "0x060",
+			"name": "F-Zero"
+		},
+		{
+			"key": "0x064",
+			"name": "Pikmin"
+		},
+		{
+			"key": "0x06c",
+			"name": "Punch Out"
+		},
+		{
+			"key": "0x070",
+			"name": "Wii Fit"
+		},
+		{
+			"key": "0x074",
+			"name": "Kid Icarus"
+		},
+		{
+			"key": "0x078",
+			"name": "Classic Nintendo"
+		},
+		{
+			"key": "0x07c",
+			"name": "Mii"
+		},
+		{
+			"key": "0x080",
+			"name": "Splatoon"
+		},
+		{
+			"key": "0x09c",
+			"name": "Mario Sports Superstars"
+		},
+		{
+			"key": "0x09d",
+			"name": "Mario Sports Superstars"
+		},
+		{
+			"key": "0x0a0",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x0a1",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x0a2",
+			"name": "Animal Crossing"
+		},
+		{
+			"key": "0x0a4",
+			"name": "ARMS"
+		},
+		{
+			"key": "0x190",
+			"name": "Pokemon"
+		},
+		{
+			"key": "0x191",
+			"name": "Pokemon"
+		},
+		{
+			"key": "0x192",
+			"name": "Pokemon"
+		},
+		{
+			"key": "0x199",
+			"name": "Pokemon"
+		},
+		{
+			"key": "0x19a",
+			"name": "Pokemon"
+		},
+		{
+			"key": "0x1ac",
+			"name": "Pokemon"
+		},
+		{
+			"key": "0x1b9",
+			"name": "Pokemon"
+		},
+		{
+			"key": "0x1bd",
+			"name": "Pokemon"
+		},
+		{
+			"key": "0x1d0",
+			"name": "Pokemon"
+		},
+		{
+			"key": "0x1d4",
+			"name": "Pokemon"
+		},
+		{
+			"key": "0x1f0",
+			"name": "Kirby"
+		},
+		{
+			"key": "0x1f4",
+			"name": "BoxBoy!"
+		},
+		{
+			"key": "0x210",
+			"name": "Fire Emblem"
+		},
+		{
+			"key": "0x224",
+			"name": "Xenoblade"
+		},
+		{
+			"key": "0x228",
+			"name": "Earthbound"
+		},
+		{
+			"key": "0x22c",
+			"name": "Chibi Robo"
+		},
+		{
+			"key": "0x320",
+			"name": "Sonic"
+		},
+		{
+			"key": "0x324",
+			"name": "Bayonetta"
+		},
+		{
+			"key": "0x334",
+			"name": "Pac-man"
+		},
+		{
+			"key": "0x338",
+			"name": "Dark Souls"
+		},
+		{
+			"key": "0x33c",
+			"name": "Tekken"
+		},
+		{
+			"key": "0x348",
+			"name": "Megaman"
+		},
+		{
+			"key": "0x34c",
+			"name": "Street fighter"
+		},
+		{
+			"key": "0x350",
+			"name": "Monster Hunter"
+		},
+		{
+			"key": "0x35c",
+			"name": "Shovel Knight"
+		},
+		{
+			"key": "0x360",
+			"name": "Final Fantasy"
+		},
+		{
+			"key": "0x364",
+			"name": "Dragon Quest"
+		},
+		{
+			"key": "0x374",
+			"name": "Kellogs"
+		},
+		{
+			"key": "0x378",
+			"name": "Metal Gear Solid"
+		},
+		{
+			"key": "0x37c",
+			"name": "Castlevania"
+		},
+		{
+			"key": "0x380",
+			"name": "Power Pros"
+		},
+		{
+			"key": "0x384",
+			"name": "Yu-Gi-Oh!"
+		},
+		{
+			"key": "0x38c",
+			"name": "Diablo"
+		},
+		{
+			"key": "0x3a0",
+			"name": "Persona"
+		},
+		{
+			"key": "0x3b4",
+			"name": "Banjo Kazooie"
+		},
+		{
+			"key": "0x3c8",
+			"name": "Fatal Fury"
+		},
+		{
+			"key": "0x3dc",
+			"name": "Minecraft"
+		}
+	]
+}

@@ -9,6 +9,7 @@
       "type": "python",
       "request": "launch",
       "module": "unittest",
+      "args": ["discover", "-s", "./src"],
       "justMyCode": true
     },
     {
